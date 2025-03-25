@@ -1,15 +1,40 @@
-//TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
-// 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
+import java.util.Random;
+import java.util.TreeMap;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP 当文本光标位于高亮显示的文本处时按 <shortcut actionId="ShowIntentionActions"/>
-        // 查看 IntelliJ IDEA 建议如何修正。
-        System.out.printf("Hello and welcome!");
+        Random rand = new Random();
+        boolean flag = true;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP 按 <shortcut actionId="Debug"/> 开始调试代码。我们已经设置了一个 <icon src="AllIcons.Debugger.Db_set_breakpoint"/> 断点
-            // 但您始终可以通过按 <shortcut actionId="ToggleLineBreakpoint"/> 添加更多断点。
-            System.out.println("i = " + i);
+        TreeMap<String, Integer> map = new TreeMap<>();
+        for (int i = 0; i <= 20; i++) {
+            map.put((i + 100 + ""), rand.nextInt(10));
         }
+        System.out.println("Value about key \"105\" is: " + map.get("105"));
+        System.out.println();
+
+        for (int i : getKey(map, 5)) {
+            if (i == 0) {
+                break;
+            } else {
+                System.out.println("The key about value 5 is: \"" + i + '\"');
+                flag = false;
+            }
+        }
+
+        if (flag) {
+            System.out.println("Have not key about value 5.");
+        }
+    }
+
+    public static int[] getKey(TreeMap<String, Integer> map, int value) {
+        int[] keys = new int[5];
+        int keyNext = 0;
+        for (int i = 100; i <= 105; i++) {
+            if (map.get(String.valueOf(i)) == value) {
+                keys[keyNext++] = i;
+            }
+        }
+        return keys;
     }
 }

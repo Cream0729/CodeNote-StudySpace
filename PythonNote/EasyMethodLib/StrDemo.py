@@ -22,3 +22,8 @@ print(s[::2])
 print(s[1::2])
 print(s[::-1])
 print(s.split(' ')[0].replace(",", ''))
+print()
+
+print('"', max(s), '", "', min(s), '"')
+
+print(sorted(s))
