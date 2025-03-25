@@ -1,0 +1,3 @@
+C:/Users/Cream/Desktop/CodeNote StudySpace/CppNote/cmake-build-debug/CMakeFiles/CppNote.dir
+C:/Users/Cream/Desktop/CodeNote StudySpace/CppNote/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Cream/Desktop/CodeNote StudySpace/CppNote/cmake-build-debug/CMakeFiles/rebuild_cache.dir
