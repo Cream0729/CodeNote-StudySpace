@@ -16,8 +16,8 @@ def dTable(start, end):
         print()
     return "\nFinish\n"
 
-
-print(dTable(1, 9))
+if __name__ == "__main__":
+    print(dTable(1, 9))
 
 
 # A function that takes another function as an argument and performs some calculations
@@ -37,8 +37,8 @@ def test(function, x, y):
     ans /= 2
     return ans * 1.1
 
-
-print(test(lambda x, y: x * y / 2, 10, 7), '\n')
+if __name__ == "__main__":
+    print(test(lambda x, y: x * y / 2, 10, 7), '\n')
 
 
 # A recursive function that sums numbers from start to times, Tips: the defult val must be the end of.
@@ -60,5 +60,5 @@ def fnct(start, times, ans=0):
         return fnct(start, times, ans)
     return ans
 
-
-print("fnct(0, 100) will return:", fnct(0, 100))
+if __name__ == "__main__":
+    print("fnct(0, 100) will return:", fnct(0, 100))
